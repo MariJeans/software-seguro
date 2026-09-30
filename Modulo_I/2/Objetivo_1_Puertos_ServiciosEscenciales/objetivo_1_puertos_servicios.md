@@ -1,8 +1,5 @@
 # Objetivo 1: Puertos y Servicios Esenciales
 
-Antes de meterme con cualquier servidor, primero hay que saber qué puertas tiene abiertas y qué corre detrás de cada una. Cuando en un reconocimiento (nmap, por ejemplo) aparece un puerto abierto, ese número no es al azar: por convención hay un servicio "de fábrica" asociado a cada uno, y saber cuál es me da una pista inmediata de qué tipo de ataque o de revisión tiene sentido probar ahí.
-
-Esta es la lista de los puertos fundamentales que pidió el objetivo:
 
 ## Puerto 20 — FTP (datos)
 Es el canal por donde viaja el contenido real cuando se transfiere un archivo por FTP en modo activo. No lleva comandos, solo la data en sí. Va de la mano con el puerto 21.
@@ -34,6 +31,3 @@ Lo mismo que el puerto 80, pero envuelto en TLS. Es el que estuvimos analizando 
 ## Puerto 3306 — MySQL
 El puerto por defecto del motor de base de datos MySQL (y su fork MariaDB). No debería estar expuesto a internet en un entorno de producción bien configurado; si aparece abierto públicamente en un scan, es una señal de que vale la pena revisar si acepta conexiones remotas con credenciales débiles o por defecto.
 
----
-
-**En resumen:** conocer estos puertos de memoria ayuda a leer un escaneo sin tener que buscar cada número, y sobre todo a priorizar: no es lo mismo encontrarse un 22 (cifrado, hay que buscar credenciales) que un 23 abierto (ya de por sí un hallazgo, porque expone todo en texto plano).
