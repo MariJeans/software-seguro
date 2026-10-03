@@ -34,7 +34,7 @@ En Payloads cargué el diccionario de hashes generado por el script como una lis
 
 Ejecuté el ataque y revisé los resultados: la columna del Grep - Extract hizo el filtro solo, mostrando enseguida en qué intento apareció el código de 16 dígitos en la respuesta — eso significó haber encontrado el hash real entre los miles de intentos generados.
 
-*(Pendiente: agregar la captura del ataque ejecutado en Burp Intruder con el resultado extraído.)*
+![Archivo de 16 digito encontrado en el ataque](./capturas/Lab_apagar-ia_8.png)
 
 Con el código de 16 dígitos ya obtenido (`5524663362514956`), el último paso era generar su hash MD5, que es lo que pedía el desafío como respuesta final.
 
