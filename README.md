@@ -10,6 +10,8 @@ Repositorio de documentación técnica del curso de **Ciberseguridad / Software 
 - **Proxy de interceptación:** instalación y configuración (**Burp Suite**).
 - **Manipulación manual de peticiones** con Repeater.
 - **Automatización y fuerza bruta** con Intruder, ataques por diccionario y generación de hashes (Python).
+- **Manipulación de sesión y control de acceso:** bypass de validaciones del lado cliente (cookies de control, cabecera `X-Forwarded-For` para evadir el bloqueo por IP).
+- **Criptografía aplicada:** descifrado de archivos ZIP protegidos (AES) con script en Python y diccionario de candidatos.
 
 ## Estructura
 
@@ -33,8 +35,10 @@ software-seguro/
         ├── Objetivo_2_Manipulacion_Manual_De_Peticiones/   # Repeater
         ├── Objetivo_3_Automatizacion_y_Fuerza_Bruta/       # Fuerza bruta vs. diccionario
         └── Objetivo_4_Labs/                      # Laboratorios prácticos
-            ├── Lab_apagar-ia/                    # Informe + script de hashes + capturas
-            └── Lab-votacion/                     # Capturas del laboratorio
+            ├── Lab_apagar-ia/                    # Fuerza bruta de hashes (informe + script + capturas)
+            ├── Lab-secreto.zip/                  # Descifrado de ZIP (AES) con script en Python y diccionario
+            ├── Lab-votacion/                     # Voto múltiple borrando la cookie de control (Intruder)
+            └── Lab-VotacionNuevaVersion/         # Bypass del bloqueo por IP con X-Forwarded-For
 ```
 
 ## Cómo navegar el repositorio
