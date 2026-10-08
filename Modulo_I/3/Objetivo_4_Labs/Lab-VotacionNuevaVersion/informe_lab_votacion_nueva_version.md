@@ -14,11 +14,11 @@ Interceptamos la primer request al votar (es similar al lab anterior): un `POST 
 
 ![Petición interceptada mostrando el error "No se puede votar más de una vez"](./capturas/Lab-Votacion-NuevaVersion_1.png)
 
-La pasamos al Repeater y al enviarla, no nos dejó volver a votar porque bloquea por IP. El mensaje de error esta vez es más específico: `"No se puede votar más de una vez desde la misma IP"` — a diferencia del lab anterior, acá ya no alcanza con borrar la cookie de voto, porque el servidor está registrando la IP de origen de cada voto.
+La paso al Repeater y al enviarla, no nos dejó volver a votar porque bloquea por IP. El mensaje de error esta vez es más específico: `"No se puede votar más de una vez desde la misma IP"` — a diferencia del lab anterior, acá ya no se puede unicamente borrar la cookie de voto, porque el servidor está registrando la IP de origen de cada voto.
 
 ![Repeater mostrando el error "No se puede votar más de una vez desde la misma IP"](./capturas/Lab-Votacion-NuevaVersion_2.png)
 
-Probamos agregando una cabecera `X-Forwarded-For: 199.123.123.1` y si pasó. Esta cabecera es la que usan los proxies/balanceadores para indicarle al servidor cuál es la IP real del cliente — si el backend confía en ese header sin validarlo, es fácil hacerle creer que cada petición viene de una IP distinta aunque en realidad todas salgan de la misma máquina.
+Pruebo agregando una cabecera `X-Forwarded-For: 199.123.123.1` y si pasó. Esta cabecera es la que usan los proxies/balanceadores para indicarle al servidor cuál es la IP real del cliente — si el backend confía en ese header sin validarlo, es fácil hacerle creer que cada petición viene de una IP distinta aunque en realidad todas salgan de la misma máquina.
 
 ![Request con la cabecera X-Forwarded-For agregada, respuesta exitosa sin el error de bloqueo por IP](./capturas/Lab-Votacion-NuevaVersion_3.png)
 
@@ -44,7 +44,7 @@ Recargo y me da el hash: una vez que los votos de la UTN lograron superar a los 
 
 ## Resumen del proceso
 
-1. Esta versión agregó una segunda capa de defensa: ya no alcanzaba con borrar la cookie `voto=...`, porque el servidor ahora también valida la **IP de origen** para impedir votos repetidos.
+1. Esta versión agregó una segunda capa de defensa: ya no alcanzaba con borrar la cookie `voto=...`, porque el servidor ahora también valida la **IP de origen** para bloquear votos repetidos.
 2. Probando con el Repeater descubrí que el servidor confía ciegamente en la cabecera `X-Forwarded-For` para determinar esa IP de origen, en vez de usar la IP real de la conexión — un error clásico cuando el backend no está detrás de un proxy confiable que sobrescriba ese header.
 3. Con Burp Intruder fui variando el `X-Forwarded-For` (primero el último octeto de 0 a 255, después el resto de los octetos) para que cada petición de voto pareciera venir de una IP distinta.
 4. Repitiendo esto las veces necesarias, los votos de la UTN terminaron superando a los de Harvard y el servidor devolvió el código final.
