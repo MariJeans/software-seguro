@@ -12,6 +12,9 @@ Repositorio de documentación técnica del curso de **Ciberseguridad / Software 
 - **Automatización y fuerza bruta** con Intruder, ataques por diccionario y generación de hashes (Python).
 - **Manipulación de sesión y control de acceso:** bypass de validaciones del lado cliente (cookies de control, cabecera `X-Forwarded-For` para evadir el bloqueo por IP).
 - **Criptografía aplicada:** descifrado de archivos ZIP protegidos (AES) con script en Python y diccionario de candidatos.
+- **Estandarización de vulnerabilidades:** diferencias entre **CVE** y **CWE**, rol de las CNA y bases de consulta pública (NVD, cve.org, MITRE).
+- **Fundamentos de seguridad:** análisis de la **tríada CIA** (Confidencialidad, Integridad, Disponibilidad) con un ejemplo de vulnerabilidad web por pilar (IDOR, Mass Assignment, Fuerza Bruta/DoS).
+- **Reportería de pentesting:** elaboración de informes profesionales (plantilla limpia y reporte completo de laboratorio).
 
 ## Estructura
 
@@ -31,19 +34,25 @@ software-seguro/
     │   ├── Objetivo_2_Escaneo_de_Red/            # Escaneo con Nmap
     │   └── Objetivo_3_Subdominios/               # Reconocimiento de subdominios
     │
-    └── 3/                                        # Clase 3 — Ataques a aplicaciones web
-        ├── Objetivo_2_Manipulacion_Manual_De_Peticiones/   # Repeater
-        ├── Objetivo_3_Automatizacion_y_Fuerza_Bruta/       # Fuerza bruta vs. diccionario
-        └── Objetivo_4_Labs/                      # Laboratorios prácticos
-            ├── Lab_apagar-ia/                    # Fuerza bruta de hashes (informe + script + capturas)
-            ├── Lab-secreto.zip/                  # Descifrado de ZIP (AES) con script en Python y diccionario
-            ├── Lab-votacion/                     # Voto múltiple borrando la cookie de control (Intruder)
-            └── Lab-VotacionNuevaVersion/         # Bypass del bloqueo por IP con X-Forwarded-For
+    ├── 3/                                        # Clase 3 — Ataques a aplicaciones web
+    │   ├── Objetivo_2_Manipulacion_Manual_De_Peticiones/   # Repeater
+    │   ├── Objetivo_3_Automatizacion_y_Fuerza_Bruta/       # Fuerza bruta vs. diccionario
+    │   └── Objetivo_4_Labs/                      # Laboratorios prácticos
+    │       ├── Lab_apagar-ia/                    # Fuerza bruta de hashes (informe + script + capturas)
+    │       ├── Lab-secreto.zip/                  # Descifrado de ZIP (AES) con script en Python y diccionario
+    │       ├── Lab-votacion/                     # Voto múltiple borrando la cookie de control (Intruder)
+    │       └── Lab-VotacionNuevaVersion/         # Bypass del bloqueo por IP con X-Forwarded-For
+    │
+    └── 4/                                        # Clase 4 — Vulnerabilidades y reportería
+        ├── Objetivo_1_CVE_CWE/                   # Estandarización: CVE vs. CWE, CNA y bases públicas
+        ├── Objetivo_2_Triada_CIA/                # Tríada CIA con una vulnerabilidad web por pilar
+        ├── Objetivo_3_Plantilla_Reporte/         # Plantilla de informe de pentesting (PDF)
+        └── Objetivo_4_Reporte_Lab/               # Reporte de pentesting del Lab Turnero (PDF)
 ```
 
 ## Cómo navegar el repositorio
 
-Cada objetivo se lee de forma independiente: entrá a la carpeta del objetivo y abrí su archivo `.md`, que incluye el contexto, la resolución y las capturas. Los laboratorios del Objetivo 4 (Clase 3) incluyen además el informe completo y los artefactos usados (scripts en Python, archivos de hashes y evidencia en `capturas/`).
+Cada objetivo se lee de forma independiente: entrá a la carpeta del objetivo y abrí su archivo `.md`, que incluye el contexto, la resolución y las capturas. Los laboratorios de la Clase 3 (`3/Objetivo_4_Labs/`) incluyen además el informe completo y los artefactos usados (scripts en Python, archivos de hashes y evidencia en `capturas/`). En la Clase 4, los Objetivos 3 y 4 son informes de pentesting en formato PDF.
 
 ## Convención para nuevos módulos
 
