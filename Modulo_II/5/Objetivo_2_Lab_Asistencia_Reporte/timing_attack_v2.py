@@ -25,12 +25,12 @@ BASE_URL = "https://chl-e2436c36-7a76-4c16-bddb-fb0537ebc25d-asistencia.software
 
 HEADERS = {
     "Content-Type": "application/x-www-form-urlencoded",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0",
+    "User-Agent": "",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "es-ES,es;q=0.9,en-US;q=0.8,en;q=0.7",
     "Origin": "https://chl-e2436c36-7a76-4c16-bddb-fb0537ebc25d-asistencia.softwareseguro.com.ar",
-    "Referer": "https://chl-e2436c36-7a76-4c16-bddb-fb0537ebc25d-asistencia.softwareseguro.com.ar/",
-    "Cookie": "_ga_MR6ZT8PJ4Q=GS2.1.s1792756504$o42$g1$t1792757958$j58$l0$h0; _ga=GA1.1.2101082356.1789045141; cf_clearance=y1lZ.fZrVYGBMAvHAX4FrYg0HPvhnQbECPYiZByWi1E-1792758266-1.2.1.1-1YXKDXxGt.VQNypjed.grwM4yPQF4QymSZ_x4pWpwhDz0Sa1krmYpGRK18zCTLuyW9Gh5Lbo2pSjSWPxOv44lK8GRNNeJuUbEz_Mec75qon5WF44dvfB.F3P8LIVZEElX8CCLCYQUzxGvRkgt4sWEqRwriu4shDggngZhuyy8dBO9dI1SlYmRG44x7Iq0lkb9GdaK273wlMQg8hgEochVt4ltc8QeoJhRWDnJLWDMNsea5R9cNg3isFiSJvJujxzikAHW3SH3idNohdDVktnq1MUDnk9X1nRjRllKrJtFE.GKBhfEMPVzehADRuLCUFpTAWikL1e8NoiMjiRQL2.u5oyYaLiHiYmiW.oeM2uW_U",
+    "Referer": "",
+    "Cookie": "",
 }
 
 CLAVE_FIJA = "gochip"
