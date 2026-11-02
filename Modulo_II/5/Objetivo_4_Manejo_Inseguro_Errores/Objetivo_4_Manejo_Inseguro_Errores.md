@@ -10,8 +10,7 @@
 ## 1. Introducción: cómo reacciona una app ante un fallo define su seguridad
 
 Toda aplicación falla en algún momento: una consulta a la base de datos que rompe, una
-variable que llega nula, un archivo que no existe, una división por cero. Lo que marca la
-diferencia **no es que falle**, sino **qué le muestra al usuario cuando falla**.
+variable que llega nula, un archivo que no existe, una división por cero.  El tema esta en **no es que falle**, sino **qué ve el usuario cuando falla**.
 
 Hay dos formas opuestas de reaccionar:
 
